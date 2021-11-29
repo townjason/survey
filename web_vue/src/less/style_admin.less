@@ -1,0 +1,340 @@
+/*color*/
+:root{
+    --gray-bg:#f6f6f6;
+    --brown:#cdb59e;
+    --gray-dark:#878888;
+}
+#app{
+    font-family: Quicksand-Light, "微軟正黑體", sans-serif;
+    overflow: hidden;
+    width: 100%;
+    color:var(--gray-dark);
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 1024px;
+    margin: 0 auto;
+    @media (min-width: 768px){
+        font-size: 16px;
+    }
+}
+a, a:hover{
+    text-decoration: none;
+}
+ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body,html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/*同意使用蒐集個人訊息*/
+.privacy{
+    //background: url(../assets/images/comma.svg) no-repeat bottom right;
+    padding: 0 0 30px;
+    margin-bottom: -20px;
+    .store-info{
+        background: #53A1A5;
+        color: #fff;
+        padding: 5px  20px;
+        width: 100%;
+    }
+    .group{
+        display: flex;
+        margin: 10px 0 0;
+        padding: 0 8px;
+        .el-input{
+            width: inherit;
+            margin-right: 10px;
+        }
+        .el-input__inner{
+            border-width: 0 0 1px ;
+            border-color: var(--gray-dark);
+            border-radius: 0;
+            padding: 28px 8px 7px;
+            height: 48px;
+            width: 32vw;
+            @media (min-width: 768px){
+                font-size: 16px;
+                max-width: 400px;
+            }
+        }
+        .el-input.is-active .el-input__inner, .el-input__inner:focus {
+            border-color: var(--brown);
+            outline: 0;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            margin: 18px 2px 0 0;
+        }
+    }
+    .el-checkbox{
+        padding-top: 30px;
+        padding-left: 10px;
+    }
+    .input-group{
+        margin: 20px 15px;
+        align-items:center;
+        .el-radio{
+            margin: 0 20px;
+        }
+        @media(max-width: 767px){
+            .el-input{
+                width: 90% !important;
+            }
+        }
+        @media(min-width: 768px){
+            .el-input{
+                margin-left: 20px;
+            }
+        }
+    }
+
+}
+.top-banner{
+    img{
+        width: 100%;
+        height: 35vw;
+        max-height: 358px;
+        background-size: cover;
+        background-position: center;
+    }
+}
+//實名制
+.member{
+    background: url(../assets/images/comma.svg) no-repeat  right 60px;
+    font-size: 18px;
+    line-height: 1.8em;
+    .con{
+        margin: 20px 20px;
+    }
+    .red{
+        color: #E37E84;
+    }
+    .el-button.yellow , a{
+        background: #F7DE6D;
+        border-color: #F7DE6D;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 48px;
+        height: 48px;
+        display: block;
+        line-height: 48px;
+        color: #444;
+    }
+    .line2{
+        height: 10px;
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+        background: #eee;
+        box-shadow: 0 0 3px #00000030 inset;
+    }
+}
+/*問卷內容*/
+.survey-box{
+    h5{
+        font-size: 14px;
+        margin: 0 10px 20px;
+        line-height: 28px;
+        @media (min-width: 768px){
+            font-size: 16px;
+        }
+        .num{
+            font-weight: 300;
+            background: url(../assets/images/line.svg) no-repeat -6px -8px;
+            padding: 0 0 0 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 20px;
+            margin-top: -5px;
+            vertical-align: top;
+            display: inline-block;
+        }
+    }
+    .con:nth-child(even){
+        background: var(--gray-bg);
+    }
+    .con{
+        padding: 30px 10px;
+        .answer{
+            margin: 0 40px;
+        }
+    }
+}
+/*星星評表*/
+.el-rate{
+    height: inherit;
+    outline: none;
+    .el-rate__icon{
+        font-size: 32px;
+        padding: 8px 6px 8px 0;
+        &.el-icon-star-on{
+            color: var(--brown) !important;
+        }
+    }
+}
+/*警示訊息*/
+.el-message{
+    //top: inherit !important;
+    min-width: 300px;
+    &:before{
+        background: grba(0,0,0,.5);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+    }
+}
+.vld-overlay.is-full-page{
+    z-index: 99;
+}
+.redLine{
+    box-shadow: 0 0 5px rgba(255,0,0,.5) inset;
+    background: #fef0f0!important;
+    animation:shadow .5s 2s forwards;
+}
+@keyframes shadow{
+    from{
+        box-shadow: 0 0 5px rgba(255,0,0,.5) inset;
+        background: #fef0f0!important;
+    }
+    to{
+        box-shadow: 0 0 5px rgba(255,0,0,0) inset;
+        background: none!important;
+    }
+}
+/*感謝填寫*/
+.complete{
+    text-align: center;
+    margin: 20vh 0;
+    line-height: 1.8em;
+    img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    h5{
+        letter-spacing: 2px;
+    }
+}
+/*彈出訊息*/
+/*
+.el-message-box{
+    width: 95vw;
+    max-width: 400px;
+    padding-bottom: 20px;
+    .el-message-box__content{
+        text-align: center;
+    }
+    .el-message-box__btns{
+        text-align: center;
+    }
+    .el-button--primary{
+        background: #FFF;
+        border: 1px solid #DCDFE6;
+        color: #606266;
+        border-radius: 36px;
+        width: 50%;
+        padding: 12px 20px;
+    }
+}*/
+/************單選************/
+.el-radio{
+    color: var(--gray-dark);
+    font-weight: 400;
+    padding: 16px 0;
+    margin-bottom: 10px;
+    display: block;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.el-radio__input.is-checked .el-radio__inner {
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+.el-radio__input.is-checked+.el-radio__label{
+    color: var(--gray-dark);
+}
+.el-radio__label{
+    font-size: 14px;
+    @media (min-width: 768px){
+        font-size: 16px;
+    }
+}
+/************複選************/
+.el-checkbox{
+    margin-bottom: 27px;
+    display: block;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.el-checkbox__inner{
+    width: 18px;
+    height: 18px;
+    &.el-checkbox__inner::after {
+        height: 9px;
+        left: 6px;
+    }
+}
+.el-checkbox__input.is-checked+.el-checkbox__label{
+    color: var(--brown);
+}
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner{
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+.el-checkbox__inner:hover{
+    border-color:var(--brown);
+}
+.el-checkbox__label{
+    color: var(--gray-dark);
+    font-weight: 400;
+    font-size: 14px;
+    @media (min-width: 768px){
+        font-size: 16px;
+    }
+    .blue{
+        color: #53A1A5;
+    }
+}
+/***下拉選單+表單***/
+.el-select{
+    @media (max-width: 767px){
+        width: 100%;
+    }
+}
+.el-select .el-input.is-focus .el-input__inner,.el-select .el-input__inner:focus,.el-textarea__inner:focus{
+    border-color: var(--brown);
+}
+.el-input__inner,.el-textarea__inner{
+    font-size: 14px;
+    @media (min-width: 768px){
+        font-size: 16px;
+    }
+}
+.el-input__inner[type="number"]{
+    padding-right: 0;
+}
+/****按鈕*****/
+.el-button:active {
+    color: var(--brown);
+    border-color: var(--brown);
+    outline: none;
+}
+.el-button:focus, .el-button:hover {
+    color: var(--brown);
+    border-color: var(--brown);
+    background-color: #fff;
+    outline:none;
+}
+

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-line">
+      <rect width="40" height="40"/>
+    </clipPath>
+  </defs>
+  <g id="line" clip-path="url(#clip-line)">
+    <line id="直线_1" data-name="直线 1" x1="26" y2="26" transform="translate(7.5 7.5)" fill="none" stroke="#dfe0df" stroke-width="1"/>
+  </g>
+</svg>
